@@ -1,0 +1,41 @@
+<html lang="en">
+  <head> </head>
+<body>
+        <div id="app"></div>
+
+<form action="output.html">
+    <p>
+        Start Date: <input type="date" name="startDate">
+    </p>
+        End Date: <input type="date" name="endDate">
+    <p>
+            <p>
+                    <label for="policy">Policy Max:</label>
+                    <select v-model="policy" >
+                            <option v-for="option in options" v-bind:value="option.value">
+                                    {{ option.text }}
+                                  </option>
+                                  <span>Policy: {{ policy }}</span>
+                      
+                    </select>
+                  </p>
+    </p>
+    <p>
+        <label for="citizen">Citizenship:</label>
+        <input id="citizen" v-model="citizen" placeholder="citizen">
+      </p>
+    <p>
+            <label for="age">Age:</label>
+            <input id="age" v-model="age" placeholder="age">
+          </p>
+    <p>
+            <label for="mailingState">Mailing State:</label>
+            <input id="mailingState" v-model="mailingState" placeholder="mailingState">
+    </p>      
+          
+      
+          
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
